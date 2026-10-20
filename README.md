@@ -38,7 +38,7 @@ Explicit choices are validated, never silently downgraded. A refusal names the s
 
 ### About `gpt-6.1-sol`
 
-The installed Codex CLI build may not list `gpt-6.1-sol` in `model/list` even though the backend accepts it (the bridge verifies this with a real `codex exec` run). `codex_status` therefore shows it as a **configured** model and warns that `codex exec` may print a missing-model-metadata warning. Change `defaultModel` / `minModel` in the config if your Codex account uses different ids.
+The installed Codex CLI build may not list `gpt-6.1-sol` in `model/list` even though the backend accepts it (a real `codex exec` run confirmed this during development). `codex_status` therefore shows it as a **configured** model and warns that `codex exec` may print a missing-model-metadata warning. Change `defaultModel` / `minModel` in the config if your Codex account uses different ids.
 
 ## Install
 

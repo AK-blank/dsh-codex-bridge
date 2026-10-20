@@ -38,7 +38,7 @@
 
 ### 关于 `gpt-6.1-sol`
 
-本机 Codex CLI 的 `model/list` 可能不列出 `gpt-6.1-sol`，但后端可以接受（本插件用真实 `codex exec` 验证过）。`codex_status` 会把它标成 **configured** 模型，并提示 `codex exec` 可能打印缺少模型元数据的警告。如果你的账号使用别的模型 id，改 `defaultModel` / `minModel` 即可。
+本机 Codex CLI 的 `model/list` 可能不列出 `gpt-6.1-sol`，但后端可以接受（开发时已用真实 `codex exec` 验证）。`codex_status` 会把它标成 **configured** 模型，并提示 `codex exec` 可能打印缺少模型元数据的警告。如果你的账号使用别的模型 id，改 `defaultModel` / `minModel` 即可。
 
 ## 安装
 
