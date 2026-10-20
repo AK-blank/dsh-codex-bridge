@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Codex 桥接",
+    "description": "读取 Codex CLI 的 5 小时与每周额度，按余额推荐模型和推理强度，把难题交给 codex exec 处理。"
+  }
+}

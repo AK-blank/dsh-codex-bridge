@@ -1,0 +1,33 @@
+# Bundle patch for dsh-codex-bridge.
+#
+# A profile that lists this package in `dsh.profile.bundles` applies this layer
+# and gets the plugin row below. The row names the package itself, so Node
+# resolution finds the installed code from the profile tree.
+#
+# The row deliberately carries no secrets. Quota and model data come from the
+# local Codex CLI and its existing `codex login` session.
+#
+# A profile can override this row in its own cordis.patch.yml, which is applied
+# after every bundle layer:
+#
+#   - id: codex-bridge
+#     name: dsh-codex-bridge
+#     config:
+#       minModel: gpt-5.6-sol          # deployment floor and reserve fallback
+#       defaultModel: gpt-6.1-sol      # normal default; high effort
+#       expensiveModel: gpt-6-astra    # explicit opt-in only
+#       minEffort: medium              # lowest reasoning level the tools will use
+#       defaultEffort: high            # reasoning level for ordinary/hard work
+#       reservePercent: 10             # fall back when a window has <=10% left
+#       stopPercent: 95                # block ordinary runs at >=95% used
+#       statusCacheSeconds: 30
+#       defaultSandbox: read-only
+#       ephemeral: true
+#       maxTimeoutSeconds: 1800
+#       maxOutputChars: 16000
+#       codexCommand: codex
+#       codexHome: ''                  # '' inherits the host environment
+
+- insert:
+    - id: codex-bridge
+      name: dsh-codex-bridge

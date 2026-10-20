@@ -1,0 +1,61 @@
+{
+  "name": "dsh-codex-bridge",
+  "version": "1.1.0",
+  "description": "Quota-aware Codex CLI bridge for DSH: reads the 5-hour and weekly ChatGPT-plan windows, defaults to gpt-6.1-sol/high, falls back to gpt-5.6-sol at 10% left, and runs codex exec tasks.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AK-blank",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AK-blank/dsh-codex-bridge.git"
+  },
+  "homepage": "https://github.com/AK-blank/dsh-codex-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/AK-blank/dsh-codex-bridge/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "selftest.mjs",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "codex",
+    "codex-cli",
+    "quota",
+    "delegation"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node selftest.mjs",
+    "selftest": "node selftest.mjs"
+  },
+  "icon": "./icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      }
+    }
+  }
+}

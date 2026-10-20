@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Codex Bridge",
+    "description": "Reads the Codex CLI quota, recommends a model and reasoning effort, and delegates hard tasks to codex exec."
+  }
+}
