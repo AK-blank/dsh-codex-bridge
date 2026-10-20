@@ -1,6 +1,6 @@
 {
   "name": "dsh-codex-bridge",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Quota-aware Codex CLI bridge for DSH: reads the 5-hour and weekly ChatGPT-plan windows, defaults to gpt-6.1-sol/high, falls back to gpt-5.6-sol at 10% left, and runs codex exec tasks.",
   "type": "module",
   "license": "MIT",

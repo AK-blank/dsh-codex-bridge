@@ -29,10 +29,10 @@ Recommendation table (`model=auto`, `reasoning_effort=auto`):
 
 | Complexity | Normal (both windows > 10% left) | Reserve (either window ≤ 10% left) |
 |---|---|---|
-| `simple` | `gpt-6.1-sol` / `medium` | `gpt-5.6-sol` / `medium` |
+| `simple` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
 | `standard` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
 | `hard` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
-| `critical` | `gpt-6.1-sol` / `xhigh` | `gpt-5.6-sol` / `high` |
+| `critical` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `high` |
 
 Explicit choices are validated, never silently downgraded. A refusal names the selectable models or the missing opt-in.
 
@@ -51,7 +51,7 @@ In the DSH Web GUI, open **Plugins**, add the package directory or install the b
 From GitHub (once the repository is published):
 
 ```bash
-dsh plugin --profile web add github:AK-blank/dsh-codex-bridge#v1.1.0
+dsh plugin --profile web add github:AK-blank/dsh-codex-bridge#v1.1.1
 ```
 
 From a local checkout:

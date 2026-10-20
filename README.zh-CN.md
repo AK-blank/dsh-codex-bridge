@@ -29,10 +29,10 @@
 
 | 复杂度 | 正常（两个窗口都 > 10% 剩余） | 保留档（任一窗口 ≤ 10% 剩余） |
 |---|---|---|
-| `simple` | `gpt-6.1-sol` / `medium` | `gpt-5.6-sol` / `medium` |
+| `simple` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
 | `standard` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
 | `hard` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `medium` |
-| `critical` | `gpt-6.1-sol` / `xhigh` | `gpt-5.6-sol` / `high` |
+| `critical` | `gpt-6.1-sol` / `high` | `gpt-5.6-sol` / `high` |
 
 显式选择会被校验，但不会静默降级；拒绝时会给出可选的模型或缺失的开关。
 
@@ -51,7 +51,7 @@
 从 GitHub 安装（仓库发布后）：
 
 ```bash
-dsh plugin --profile web add github:AK-blank/dsh-codex-bridge#v1.1.0
+dsh plugin --profile web add github:AK-blank/dsh-codex-bridge#v1.1.1
 ```
 
 本地目录：

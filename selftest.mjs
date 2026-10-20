@@ -281,13 +281,13 @@ const blockedBudget = computeBudget(readQuota(quotaFixture(96, 5), now), cfg);
 check('recommendation: normal defaults to 6.1-sol/high', () => {
   const rec = recommend(ladder, normalBudget, cfg);
   expectEqual(rec.simple.model, 'gpt-6.1-sol');
-  expectEqual(rec.simple.effort, 'medium');
+  expectEqual(rec.simple.effort, 'high');
   expectEqual(rec.standard.model, 'gpt-6.1-sol');
   expectEqual(rec.standard.effort, 'high');
   expectEqual(rec.hard.model, 'gpt-6.1-sol');
   expectEqual(rec.hard.effort, 'high');
   expectEqual(rec.critical.model, 'gpt-6.1-sol');
-  expectEqual(rec.critical.effort, 'xhigh');
+  expectEqual(rec.critical.effort, 'high');
 });
 check('recommendation: reserve falls back to 5.6-sol', () => {
   const rec = recommend(ladder, reserveBudget, cfg);
